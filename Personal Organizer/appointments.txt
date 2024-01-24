@@ -1,0 +1,18 @@
+Meeting 1
+Team meeting
+Work
+2024-01-15 09:00:00
+2024-01-15 10:30:00
+Office
+John
+Jane
+2024-01-14 15:00:00
+Meeting 2
+Client meeting
+Work
+2024-01-20 14:00:00
+2024-01-20 15:30:00
+Client Office
+ClientA
+ClientB
+2024-01-19 10:00:00

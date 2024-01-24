@@ -42,4 +42,10 @@
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Downloads\tasks.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="appointments.txt" />
+  </ItemGroup>
 </Project>

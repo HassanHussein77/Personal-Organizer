@@ -3,7 +3,7 @@
 
 #include "task.h"
 #include "appointment.h"
-
+#include <fstream>
 //The menu class manages the whole system
 //It basically controls the systems basic functionality
 //allowing the user to add tasks, notes and appointments and display them
@@ -177,17 +177,33 @@ public:
         background.setScale(1, 2);
 
 
-        //initializing tasks
-        Task task1("Task 1", "Complete assignment", "Study", 1, "2024-01-15", false);
-        Task task2("Task 2", "Prepare presentation", "Work", 2, "2024-01-20", false);
-        tasks = { task1, task2 };
+        //load tasks from file, first to local variables, and then create a new task in the tasks vector
+        tasksFile.open("tasks.txt", ios::in);
+        if (tasksFile.is_open()) {
+            string title, description, category, dueDate;
+            int priority;
+            bool completed;
+            while (tasksFile >> title >> description >> category >> priority >> dueDate >> completed) {
+                Task task(title, description, category, priority, dueDate, completed);
+                tasks.push_back(task);
+            }
+        }
 
-        //initializing notes
-        Appointment appointment1("Meeting 1", "Team meeting", "Work", "2024-01-15 09:00:00", "2024-01-15 10:30:00", "Office", { "John", "Jane" });
-        appointment1.setReminder("2024-01-14 15:00:00");  // Set a reminder for 1 day before
-        Appointment appointment2("Meeting 2", "Client meeting", "Work", "2024-01-20 14:00:00", "2024-01-20 15:30:00", "Client Office", { "ClientA", "ClientB" });
-        appointment2.setReminder("2024-01-19 10:00:00");  // Set a reminder for 1 day before
-        appointments = { appointment1, appointment2 };
+        //load appointments from file, first to local variables, and then create a new appointment in the appointments vector
+        appointmentFile.open("appointments.txt", ios::in);
+        if (appointmentFile.is_open()) {
+            string title, description, category, startTime, endTime, location, reminder;
+            vector<string> attendees;
+            while (appointmentFile >> title >> description >> category >> startTime >> endTime >> location >> reminder) {
+                string attendee;
+                while (appointmentFile >> attendee) {
+                    attendees.push_back(attendee);
+                }
+                Appointment appointment(title, description, category, startTime, endTime, location, attendees);
+                appointment.setReminder(reminder);
+                appointments.push_back(appointment);
+            }
+        }        
 
         //initializing menu options
         options[0].setString("1. Display Tasks");

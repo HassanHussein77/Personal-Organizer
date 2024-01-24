@@ -18,6 +18,7 @@ private:
     vector<Appointment> appointments;
     int xCor;
     int yCor;
+    fstream tasksFile, appointmentFile;
 
     //helper functions
     void handleKeyPress(Keyboard::Key key, RenderWindow& window, vector<Task>& tasks, vector<Appointment>& appointments) {
@@ -174,6 +175,7 @@ public:
         bgTexture.loadFromFile("img/background.png");
         background.setTexture(bgTexture);
         background.setScale(1, 2);
+
 
         //initializing tasks
         Task task1("Task 1", "Complete assignment", "Study", 1, "2024-01-15", false);

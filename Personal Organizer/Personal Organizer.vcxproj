@@ -134,6 +134,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.h" />
+    <ClCompile Include="priorityFeature.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="appointment.h" />
+    <ClInclude Include="organizerItem.h" />
+    <ClInclude Include="reminderFeature.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="utility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

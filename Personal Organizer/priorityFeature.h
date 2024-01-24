@@ -1,4 +1,7 @@
-#include<string>
+#ifndef PRIORITYFEATURE_H
+#define PRIORITYFEATURE_H
+
+#include <string>
 using namespace std;
 //Feature Classes
 class PriorityFeature {
@@ -55,3 +58,6 @@ public:
     }
 
 };
+
+#endif
+

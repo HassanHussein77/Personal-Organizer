@@ -1,14 +1,9 @@
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <iostream>
-#include <chrono>
-#include <ctime>
-#include <sstream>
-#include <vector>
-#include "priorityFeature.cpp"
-#include "main.cpp"
-using namespace sf;
-using namespace std;
+#ifndef MENU_H
+#define MENU_H
+
+#include "task.h"
+#include "appointment.h"
+
 //The menu class manages the whole system
 //It basically controls the systems basic functionality
 //allowing the user to add tasks, notes and appointments and display them
@@ -542,3 +537,5 @@ public:
 
 
 };
+
+#endif

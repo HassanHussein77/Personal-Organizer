@@ -18,5 +18,28 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="menu.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="priorityFeature.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="reminderFeature.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="organizerItem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="appointment.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
